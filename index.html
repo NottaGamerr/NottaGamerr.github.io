@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>My Site</title>
+  <meta name="description" content="This is my portfolio page.">
+  <meta name="author" content="Krish">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+<header class="main_nav green">
+  <div class="container">
+    <div class="logo">
+      <a href="https://codercookies.com/">Coder Cookies</a>
+    </div>
+  </div>
+</header>
+
+
+<div class="container">
+  
+<div id="typewriter" class="twelve columns" style="background-color: orange;">
+  
+<h2 id="typetext0">Hello, my name is Krish!</h2>
+<h2 id="typetext1">I love computers and programming!</h2>
+<h2 id="typetext2">Check out my projects!</h2>
+</div>
+</div>
+
+
+
+
+
+<div class="container">
+  
+
+<div class="four columns">
+  <img src="https://cdn.pixabay.com/photo/2016/10/16/16/33/dual-screen-1745705_960_720.png">
+</div>
+<div class="four columns">
+  <img src="https://cdn.pixabay.com/photo/2017/09/25/18/56/social-media-2786261_960_720.jpg">
+</div>
+<div class="four columns">
+  <img src="https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_960_720.jpg">
+</div>
+
+
+</div>
+
+<header class="main_nav green">
+  <div class="container">
+    <div class="four columns">
+      <img class="avatar" src="https://cdn.pixabay.com/photo/2013/05/11/08/28/sunset-110305_1280.jpg">
+    </div>
+    <div class="eight columns">
+
+      <h2 class="bio">About Me</h2>
+
+      <h5>Hello! My name is Krish and I love to code! I started with basic HTML and have since moved on to CSS and Javascript! This is my website that I have created and it will tell you all about me! I am 13 years old and live in Canada. I want to be a software engineer when I grow up because I am very passionate about coding! </h5>
+    </div>
+  </div>
+</header>
+
+
+<footer>
+  <div class="container"> 
+    <div class="twelve columns">
+      <ul class="social">
+        <li class="facebook"><a href="#"> 
+        <i class="fab fa-facebook"></i></a></li>
+        <li class="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li class="youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<p class="copyright">© 2022 CoderCookies All Rights Reserved.</p>
+
+
+<script>
+  
+var allText = ["Hello, my name is Krish!", "I love computers and programming!", "Check out my projects!"]
+
+var currentIndex0 = 0;
+var currentIndex1 = 0;
+var currentIndex2 = 0;
+
+var textHeader0 = document.getElementById("typetext0");
+var textHeader1 = document.getElementById("typetext1");
+var textHeader2 = document.getElementById("typetext2");
+
+var myVar0;
+var myVar1;
+var myVar2;
+
+function add0() 
+{
+
+var text = allText[0].substring(0, currentIndex0 + 1);
+textHeader0.innerHTML = ">> " + text;
+currentIndex0 = currentIndex0 + 1;
+
+if(text === allText[0]) 
+{
+
+clearInterval(myVar0);
+setTimeout(
+
+function() 
+{ 
+  myVar0 = setInterval(remove0, 50); }, 1000);
+}
+
+}
+
+function remove0() 
+{
+
+var text = allText[0].substring(0, currentIndex0 - 1);
+textHeader0.innerHTML = ">> " + text;
+currentIndex0-=1;
+
+if(text === "") 
+{
+
+clearInterval(myVar0);
+
+currentIndex0 = 0
+setTimeout(
+
+function() 
+{ 
+  myVar0 = setInterval(add0, 100); }, 200);
+}
+
+}
+
+add0()
+remove0()
+
+
+
+
+
+function add1() 
+{
+
+var text = allText[1].substring(0, currentIndex1 + 1);
+textHeader1.innerHTML = ">> " + text;
+currentIndex1= currentIndex1 + 1;
+
+if(text === allText[1]) 
+{
+
+clearInterval(myVar1);
+setTimeout(
+
+function() 
+{ 
+  myVar1 = setInterval(remove1, 50); }, 1000);
+}
+
+}
+
+function remove1() 
+{
+
+var text = allText[1].substring(0, currentIndex1 - 1);
+textHeader1.innerHTML = ">> " + text;
+currentIndex1-=1;
+
+if(text === "") 
+{
+
+clearInterval(myVar1);
+
+currentIndex1 = 0
+setTimeout(
+
+function() 
+{ 
+  myVar1 = setInterval(add1, 100); }, 200);
+}
+
+}
+
+add1()
+remove1()
+
+
+
+
+
+function add2() 
+{
+
+var text = allText[2].substring(0, currentIndex1 + 1);
+textHeader2.innerHTML = ">> " + text;
+currentIndex2= currentIndex2 + 1;
+
+if(text === allText[2]) 
+{
+
+clearInterval(myVar2);
+setTimeout(
+
+function() 
+{ 
+  myVar2 = setInterval(remove2, 50); }, 1000);
+}
+
+}
+
+function remove2() 
+{
+
+var text = allText[2].substring(0, currentIndex0 - 1);
+textHeader2.innerHTML = ">> " + text;
+currentIndex2-=2;
+
+if(text === "") 
+{
+
+clearInterval(myVar2);
+
+currentIndex2 = 0
+setTimeout(
+
+function() 
+{ 
+  myVar2 = setInterval(add2, 100); }, 200);
+}
+
+}
+
+add2()
+remove2()
+</script>
+
+
+</body>
+</html>
